@@ -9,6 +9,10 @@ def classify_image():
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
+@app.route('/')
+def home():
+    return "home page"
+
 if __name__ == "__main__":
     print("Starting Python Flask Server For Sports Celebrity Image Classification")
     util.load_saved_artifacts()
